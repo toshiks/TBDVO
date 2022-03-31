@@ -1,0 +1,5 @@
+_target_: src.utils.telegram_bot.Bot
+
+token: None
+chat_ids: [ ]
+is_debug: ${debug}

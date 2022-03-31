@@ -1,0 +1,3 @@
+from .deepvo_original import DeepVOForBench
+from .deepvo_reduced_cnn import DeepVOReducedCNNFeaturesForBench
+from .deepvo_transformer import DeepVOTransformerEncoderForBench

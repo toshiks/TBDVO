@@ -1,0 +1,6 @@
+_target_: src.models_bench.modules.deepvo.DeepVOReducedCNNFeatures
+hidden_size: 1000
+pretrained_cnn_path: ${data_dir}/checkpoints/flownets_bn_EPE2.459.pth.tar
+pose_decoder:
+  _target_: src.models_bench.modules.deepvo.layers.VOPoseConstrainQuaternionDecoder
+  input_dim: 1000

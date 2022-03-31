@@ -1,0 +1,45 @@
+# @package _global_
+
+defaults:
+  - override /trainer: minimal.yaml
+  - override /model: deepvo.yaml
+  - override /datamodule: kitti_datamodule.yaml
+  - override /callbacks: wandb.yaml
+  - override /logging: wandb.yaml
+  - override /telegram_bot: default
+
+seed: 12345
+
+datamodule:
+  batch_size: 8
+  num_workers: 6
+  datasets:
+    train:
+      kitti:
+        skip_prob: 0.3
+        window_size: 7
+        is_3dof: yes
+    val:
+      kitti:
+        window_size: 7
+        is_3dof: yes
+
+model:
+  only_long_train: null
+  odometry_loss:
+    is_trainable: no
+    coef_coord: 1.0
+    coef_angle: 10.0
+  geometric_loss:
+    is_trainable: no
+    coef_coord: 1.0
+    coef_angle: 10.0
+
+
+trainer:
+  num_sanity_val_steps: 0
+  weights_summary: "top"
+  gpus: [0, 1]
+  accelerator: "ddp"
+  max_epochs: 200
+

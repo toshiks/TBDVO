@@ -1,0 +1,11 @@
+train:
+  kitti:
+    _target_: src.datamodules.datasets.kitti.KittiDatasetFactory
+
+    path: ${data_dir}/kitti_dataset
+    window_size: 6
+    skip_prob: 0.2
+    is_3dof: no
+
+    sequences_name: [ "00", "02", "08", "09" ]
+

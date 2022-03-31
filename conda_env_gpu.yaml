@@ -1,0 +1,37 @@
+name: tbdvo
+channels:
+  - pytorch
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.5
+  - pip=20.0.2
+  - pytorch=1.10.2
+  - torchvision=0.11.3
+  - pytorch-lightning=1.5.9
+  - flake8=3.7.9
+  - pylint=2.6.0
+  - einops=0.3.2
+  - pip:
+    - pre-commit==1.21.0
+    - pydocstyle==5.1.1
+    - flake8-docstrings==1.5.0
+    - opencv-python==4.5.1.48
+    - more-itertools==8.7.0
+    - hydra-core==1.1.0
+    - hydra-colorlog==1.1.0.dev1
+    - nibabel==3.2.1
+    - pykitti==0.3.1
+    - torchmetrics==0.7.0
+    - python-telegram-bot==13.6
+    - albumentations==1.0.0
+    - python-dotenv
+    - rich
+    - pytest
+    - sh
+    - scikit-learn
+    - seaborn
+    - pudb
+    - wandb>=0.10.30
+    - torchinfo==1.6.3

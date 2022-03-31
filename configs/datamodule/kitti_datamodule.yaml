@@ -1,0 +1,9 @@
+defaults:
+  - datasets:
+      - train
+      - val
+
+_target_: src.datamodules.kitti_datamodule.KittiDatamodule
+
+num_workers: 4
+batch_size: 8

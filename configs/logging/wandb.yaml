@@ -1,0 +1,8 @@
+# https://wandb.ai
+
+wandb:
+  _target_: pytorch_lightning.loggers.wandb.WandbLogger
+  project: "TBDVO"
+  save_dir: "."
+  offline: True # set True to store all logs only locally
+  log_model: False
